@@ -50,11 +50,11 @@ class Enemy():
     elif level == "2":
       self.attack = random.randint(3,5)
       self.defense = random.randint(3,5)
-      self.heatlh = 50
+      self.health = 50
     elif level == "3":
-      self.attack == random.randint(5,10)
-      self.defense == random.randint(5,8)
-      self.heatlh == 100
+      self.attack = random.randint(5,10)
+      self.defense = random.randint(5,8)
+      self.heatlh = 100
 
 
     

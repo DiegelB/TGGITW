@@ -14,9 +14,12 @@ def battleFunc(player):
       print("\nYou're attack = " + str(player.attack) + "." +
             "\n" + enemy.name + "'s defense = " + str(enemy.defense) +
             "\n" + enemy.name + "'s health = " + str(enemy.health))
-      enemyDamage = player.attack - enemy.defense
+      randDamage = random.randint(0,3)
+      print("You did an additional " + str(randDamage) + " damage!" + 
+            "\nFor a total of " + str(player.attack + randDamage))
+      enemyDamage = (player.attack + randDamage) - enemy.defense
       enemy.health -= enemyDamage
-      input(enemy.health)
+      input(enemy.name + "'s health " + str(enemy.health))
 
   
   
