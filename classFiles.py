@@ -1,4 +1,4 @@
-
+import random
 
 class Player():
 
@@ -34,24 +34,33 @@ class Player():
 
 class Enemy():
 
-  def __init__(self, attack=0, defense=0, health=100, name="Bad Guy"):
+  def __init__(self, name="Bad Guy", attack=0, defense=0, health=100):
     self.attack = attack
     self.defense = defense
     self.health = health
     self.name = name
 
-  def chooseEnemy():
-    randNum = random.randint(1,5)
-    if randNum == 1:
-      return "Goblin"
-    elif randNum == 2:
-      return "Skeleton"
-    elif randNum == 3:
-      return "Ghost"
-    elif randNum == 4:
-      return "Cyclops"
-    elif randNum == 5:
-      return "Godzilla"
+  def createEnemy(self, level):
+    enemyNames = ["Goblin", "Skeleton", "Ghost", "Cyclops", "Zombie"]
+    self.name = random.choice(enemyNames)
+    if level == "1":
+      self.attack = random.randint(1,3)
+      self.defense = random.randint(1,3)
+      self.health = 30
+    elif level == "2":
+      self.attack = random.randint(3,5)
+      self.defense = random.randint(3,5)
+      self.heatlh = 50
+    elif level == "3":
+      self.attack == random.randint(5,10)
+      self.defense == random.randint(5,8)
+      self.heatlh == 100
+
+
+    
+
+    
+
 
 
 
